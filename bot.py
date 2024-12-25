@@ -8,4 +8,4 @@ class Client(discord.Client):
 
 
 client = Client()
-client.run(os.environ["TOKEN"])
+client.run(os.environ["DISCORD_TOKEN"])
