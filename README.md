@@ -16,3 +16,23 @@
     >
   </a>
 </p>
+
+## Usage
+
+1. Get your Discord token by following [this guide](https://gist.github.com/MarvNC/e601f3603df22f36ebd3102c501116c6)
+
+2. Write a Docker Compose file like this:
+
+    ```yaml
+    services:
+      disco:
+        image: ghcr.io/NTUT-NPC/disco:latest
+        container_name: disco
+        environment:
+          - DISCORD_TOKEN=YOUR_DISCORD_TOKEN
+        restart: unless-stopped
+    ```
+
+3. Run `docker-compose up -d` to start the bot
+
+4. Keep the bot online and party all night long! 🎉
