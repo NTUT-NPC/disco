@@ -11,3 +11,6 @@ wheels/
 
 # Editor files
 .vscode/
+
+# Docker compose
+compose.yaml
