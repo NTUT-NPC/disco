@@ -23,19 +23,13 @@ Get your Discord token by following [this guide](https://gist.github.com/MarvNC/
 
 ### Running with Docker
 
-1. Write a Docker Compose file like this:
-
-    ```yaml
-    services:
-      disco:
-        image: ghcr.io/NTUT-NPC/disco:latest
-        container_name: disco
-        environment:
-          - DISCORD_TOKEN=YOUR_DISCORD_TOKEN
-        restart: unless-stopped
-    ```
-
-2. Run `docker-compose up -d` to start the bot
+```sh
+docker run -d \
+  --name disco \
+  --restart unless-stopped \
+  -e DISCORD_TOKEN=YOUR_DISCORD_TOKEN \
+  ghcr.io/ntut-npc/disco:latest
+```
 
 ### Running locally
 
@@ -46,10 +40,10 @@ Get your Discord token by following [this guide](https://gist.github.com/MarvNC/
     # Edit .env with your favorite editor
     ```
 
-3. Run the bot with `uv`:
+2. Run the bot with `uv`:
 
     ```sh
     uv run bot.py
     ```
 
-4. Keep the bot online and party all night long! 🎉
+3. Keep the bot online and party all night long! 🎉
