@@ -1,5 +1,9 @@
 import os
 import discord
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 class Client(discord.Client):

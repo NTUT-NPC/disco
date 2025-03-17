@@ -19,9 +19,11 @@
 
 ## Usage
 
-1. Get your Discord token by following [this guide](https://gist.github.com/MarvNC/e601f3603df22f36ebd3102c501116c6)
+Get your Discord token by following [this guide](https://gist.github.com/MarvNC/e601f3603df22f36ebd3102c501116c6)
 
-2. Write a Docker Compose file like this:
+### Running with Docker
+
+1. Write a Docker Compose file like this:
 
     ```yaml
     services:
@@ -33,6 +35,21 @@
         restart: unless-stopped
     ```
 
-3. Run `docker-compose up -d` to start the bot
+2. Run `docker-compose up -d` to start the bot
+
+### Running locally
+
+1. Copy `.env.example` to `.env` and fill in your Discord token:
+
+    ```sh
+    cp .env.example .env
+    # Edit .env with your favorite editor
+    ```
+
+3. Run the bot with `uv`:
+
+    ```sh
+    uv run bot.py
+    ```
 
 4. Keep the bot online and party all night long! 🎉
